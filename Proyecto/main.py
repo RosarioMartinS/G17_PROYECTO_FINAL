@@ -25,3 +25,5 @@ def registro():
         return render_template("register.html")
     elif request.method == "POST":
         return redirect('/register')
+
+app.run(host='0.0.0.0', port=81)
