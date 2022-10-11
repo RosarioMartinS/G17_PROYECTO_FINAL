@@ -58,7 +58,7 @@ h1{
 }
 
 .style-input::placeholder{
-    color:var(--blanco)
+    color:var(--gris-claro)
 }
 
 
