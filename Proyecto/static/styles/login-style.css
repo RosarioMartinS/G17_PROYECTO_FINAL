@@ -67,11 +67,11 @@ h1{
 }
 
 #username-login::placeholder{
-    color:var(--blanco)
+    color:var(--gris-claro)
 }
 
 #username-password::placeholder{
-    color:var(--blanco)
+    color:var(--gris-claro)
 }
 
 hr{

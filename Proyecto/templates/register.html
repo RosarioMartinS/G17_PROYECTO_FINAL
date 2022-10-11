@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final</title>
-    <link rel="stylesheet" href="/Proyecto/static/styles/register-style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/register-style.css')}}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
     </style>
@@ -17,13 +17,13 @@
             <h1 class="h1-style">Registrarse</h1>
 
             <div class="contenedor-textos">
-                <input type="email" name="e-mail" id="username-email" class="style-input" placeholder="E-mail">
+                <input type="email" name="e-mail" id="username-email" class="style-input" placeholder="E-mail" required>
                 <hr>
-                <input type="text" name="name" id="user-name" class="style-input" placeholder="Nombre/s">
+                <input type="text" name="name" id="user-name" class="style-input" placeholder="Nombre/s" required>
                 <hr>
-                <input type="text" name="username" id="username-login" class="style-input" placeholder="Nombre de Usuario">
+                <input type="text" name="username" id="username-login" class="style-input" placeholder="Nombre de Usuario" required>
                 <hr>
-                <input type="password" name="user-password" id="username-password" class="style-input" placeholder="Contraseña">
+                <input type="password" name="user-password" id="username-password" class="style-input" placeholder="Contraseña" required>
                 <hr>
             </div>
     
