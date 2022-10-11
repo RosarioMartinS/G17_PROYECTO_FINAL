@@ -25,6 +25,22 @@ def registro():
     if request.method == "GET":
         return render_template("register.html")
     elif request.method == "POST":
-        return redirect('/register')
+        session['usuario'] = request.form["username"]
+        session['contraseña'] = request.form["user-password"]
+        session['mail'] = request.form['e-mail']
+        session['nombre'] = request.form['name']
+        session['mail'] = session['mail'].replace("@", ".")
+
+        print(session['mail'])
+
+        return redirect('/añadirUsuario')
+
+@app.route('/añadirUsuario', methods=['POST', 'GET'])
+def agregarUsuario():
+    conn = sqlite3.connect('SocialMedia.db')
+    q = f"""INSERT INTO Usuarios(nombre, contraseña, mail, username) VALUES({session['nombre']}, {session['contraseña']}, {session['mail']}, {session['usuario']})"""
+    conn.execute(q)
+    conn.commit()
+    conn.close()
 
 app.run(host='0.0.0.0', port=81)
