@@ -1,6 +1,7 @@
 from flask import Flask, flash, request, redirect, url_for, render_template, session
 import os # The OS module in Python provides functions for creating and removing a directory (folder),
 # fetching its contents, changing and identifying the current directory, etc.
+import sqlite3
 
 from werkzeug.utils import secure_filename
 UPLOAD_FOLDER = './static/img'
