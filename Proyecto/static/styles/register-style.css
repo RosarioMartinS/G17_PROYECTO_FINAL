@@ -17,7 +17,7 @@ body{
 
 #contenedor{
     display: flex;
-    height: 80vh;
+    height: 100vh;
     place-items: center;
     justify-content: center;
     
@@ -43,10 +43,11 @@ h1{
     flex-direction: column;
     gap: 1em;
     margin-top: 1em;
-    width: 60%;
+    width: 100%;
+
 }
 
-#username-login{
+.style-input{
     font-size: 1.3em;
     background-color: var(--negro);
     border: 0;
@@ -56,23 +57,10 @@ h1{
     margin-left: 10px;
 }
 
-#username-password{
-    font-size: 1.3em;
-    background-color: var(--negro);
-    border: 0;
-    color: var(--blanco);
-    font-weight: bolder;
-    outline: none;
-    margin-left: 10px;
-}
-
-#username-login::placeholder{
+.style-input::placeholder{
     color:var(--blanco)
 }
 
-#username-password::placeholder{
-    color:var(--blanco)
-}
 
 hr{
     color:var(--blanco);
@@ -80,7 +68,7 @@ hr{
 
 .contenedor-botones{
     margin-top: 20px;
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,7 +76,7 @@ hr{
 }
 
 .btn {
-    width: 48%;     /* es variable al boton */
+    width: 100%;     /* es variable al boton */
     border-radius: 20px;
     background-color: var(--blanco);
     color: var(--negro);
