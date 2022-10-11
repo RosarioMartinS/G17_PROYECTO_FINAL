@@ -1,0 +1,47 @@
+:root{
+    --gris-claro:  #ADADAD;
+    --blanco: #f0f1f1;
+    --rojo:  #D62D2D;
+    --negro: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--negro);
+}
+
+.barra-navegacion{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.navegacion{
+    display: flex;
+    gap: 25px
+}
+
+#estilo-texto{
+    font-size: 1.5em;
+    color: var(--blanco);
+    font-weight: bolder;
+
+}
+
+.borde{
+    padding-left: 20px;
+    border-left: 2px solid var(--blanco);
+}
+
+/* Menu Hamburguesa*/
+
+/* Fin Menu Hamburguesa*/
