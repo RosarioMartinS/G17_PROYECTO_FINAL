@@ -16,39 +16,70 @@ app.secret_key = "asdasdazsdawefdfascacs"
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
     if request.method == "GET":
-        return render_template("login.html")
+        return render_template("login.html", login = False)
     elif request.method == "POST":
         return redirect('/')
+
+@app.route('/usuarioIngresado', methods=['GET', 'POST'])
+def checkearUsuario():
+    if request.method == "GET":
+        return redirect('/')
+    elif request.method == "POST":
+        session['contraseña'] = request.form["user-password"]
+        session['usuario'] = request.form["username"]
+        conn = sqlite3.connect('SocialMedia.db')
+        q = f"""
+                SELECT contraseña, username FROM Usuarios 
+                WHERE contraseña = '{session['contraseña']}'
+                and username = '{session['usuario']}'
+                """
+        resu = conn.execute(q)
+
+        if resu.fetchone():
+            return redirect('/home')
+        else:
+            flash('El usuario o la contraseña son incorrectos! Intenta de nuevo o registrate si no lo estas!')
+            return render_template("login.html", login = True)
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def registro():
     if request.method == "GET":
         return render_template("register.html")
     elif request.method == "POST":
-        session['usuario'] = request.form["username"]
-        session['contraseña'] = request.form["user-password"]
-        session['mail'] = request.form['e-mail']
-        session['nombre'] = request.form['name']
-        session['mail'] = session['mail'].replace("@", ".")
-
-        print(session['mail'])
-
-        return redirect('/añadirUsuario')
+        return redirect('/')
 
 @app.route('/añadirUsuario', methods=['POST', 'GET'])
 def agregarUsuario():
     if request.method == "POST":
+        session['usuario'] = request.form["username"]
+        session['contraseña'] = request.form["user-password"]
+        session['mail'] = request.form['e-mail']
+        session["nombre"] = request.form['name']
+        session['mail'] = session['mail'].replace("@", ".")
+
         conn = sqlite3.connect('SocialMedia.db')
         q = f"""INSERT INTO Usuarios(nombre, contraseña, mail, username) 
-                VALUES('{session['nombre']}', '{session['contraseña']}', '{session['mail']}', '{session['usuario']}')"""
+                VALUES('{session["nombre"]}', '{session['contraseña']}', '{session['mail']}', '{session['usuario']}')"""
         conn.execute(q)
+
         x = f"""CREATE TABLE IF NOT EXISTS {session['usuario']} 
             (publicacion TEXT);"""
         conn.execute(x)
+
         conn.commit()
         conn.close()
         return render_template("base.html")
     elif request.method == "GET":
         return redirect('/register')
+
+@app.route('/home', methods=['POST','GET'])
+def home():
+    if request.method == "GET":
+        return render_template("base.html")
+    elif request.method == "POST":
+        return redirect('/home')
+
+
 
 app.run(host='0.0.0.0', port=81)
