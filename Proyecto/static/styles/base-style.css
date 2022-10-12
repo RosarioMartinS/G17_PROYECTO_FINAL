@@ -52,7 +52,9 @@ body{
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2%;
+    flex-direction: column;
+    
 }
 
 .imagenes{
@@ -60,6 +62,45 @@ body{
     color:white;
     display: flex;
     height: auto;
+    margin: auto;
     justify-content: center;
-    background-color: red;
+    
+}
+
+.estilo-imagenes{
+    width: 400px;
+    height: 550px;
+}
+
+.user-info{
+    width: 400px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.foto-nombre-usuario{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.foto-de-perfil{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+    
+}
+.estilo-nombre-usuario{
+    margin-top: 8%;
+    margin-left: 5%;
+    width: auto;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color:#f0f1f1;
 }
