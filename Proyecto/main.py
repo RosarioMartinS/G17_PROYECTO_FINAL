@@ -42,6 +42,9 @@ def agregarUsuario():
         q = f"""INSERT INTO Usuarios(nombre, contraseña, mail, username) 
                 VALUES('{session['nombre']}', '{session['contraseña']}', '{session['mail']}', '{session['usuario']}')"""
         conn.execute(q)
+        x = f"""CREATE TABLE IF NOT EXISTS {session['usuario']} 
+            (publicacion TEXT);"""
+        conn.execute(x)
         conn.commit()
         conn.close()
         return render_template("base.html")
