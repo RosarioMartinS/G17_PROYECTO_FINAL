@@ -12,7 +12,7 @@
 }
 
 body{
-    background-color: var(--negro);
+    background-color: var(--negro) !important   ;
 }
 
 .barra-navegacion{
@@ -20,14 +20,15 @@ body{
     height: auto;
     margin-top: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     
 }
 
 .navegacion{
     display: flex;
-    gap: 25px
+    justify-content: center;
+    gap: 25px;
 }
 
 #estilo-texto{
@@ -45,3 +46,20 @@ body{
 /* Menu Hamburguesa*/
 
 /* Fin Menu Hamburguesa*/
+
+.contenedor-main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.imagenes{
+    width: 50%;
+    color:white;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    background-color: red;
+}
