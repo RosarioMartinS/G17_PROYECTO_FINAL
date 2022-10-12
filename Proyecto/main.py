@@ -37,10 +37,18 @@ def registro():
 
 @app.route('/añadirUsuario', methods=['POST', 'GET'])
 def agregarUsuario():
-    conn = sqlite3.connect('SocialMedia.db')
-    q = f"""INSERT INTO Usuarios(nombre, contraseña, mail, username) VALUES({session['nombre']}, {session['contraseña']}, {session['mail']}, {session['usuario']})"""
-    conn.execute(q)
-    conn.commit()
-    conn.close()
+    if request.method == "POST":
+        conn = sqlite3.connect('SocialMedia.db')
+        q = f"""INSERT INTO Usuarios(nombre, contraseña, mail, username) 
+                VALUES('{session['nombre']}', '{session['contraseña']}', '{session['mail']}', '{session['usuario']}')"""
+        conn.execute(q)
+        x = f"""CREATE TABLE IF NOT EXISTS {session['usuario']} 
+            (publicacion TEXT);"""
+        conn.execute(x)
+        conn.commit()
+        conn.close()
+        return render_template("base.html")
+    elif request.method == "GET":
+        return redirect('/register')
 
 app.run(host='0.0.0.0', port=81)
