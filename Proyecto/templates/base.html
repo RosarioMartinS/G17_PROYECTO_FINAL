@@ -20,26 +20,22 @@
             </div>
 
             <div class="navegacion">
-              <div id="estilo-texto" >Buscar</div>
-              <div id="estilo-texto" class="borde" >Publicaciones</div>
-              <div id="estilo-texto" class="borde" >Mensajes</div>
+              <div class="estilo" ><h2 class="estilo-texto"> Buscar </h2></div>
+              <div class="estilo estilo-borde"><h2 class="estilo-texto"> Publicaciones </h2></div>
+              <div class="estilo estilo-borde "><h2 class="estilo-texto"> Mensajes </h2></div>
             </div>
             
         </nav>
     </header>
-<<<<<<< HEAD
     <div class="invisible">
           
     </div>
-    {% for i in range (10)%}
-      <main class="contenedor-main">
 
-=======
+
     {% for i in range (10)%}
       <main class="contenedor-main ">
->>>>>>> 1e1e2e88f0aef3695f64f7a1a6bc8bb4209082bf
         <div class="imagenes">
-          <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes">
+          <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes" id="info-imagen" onclick="agregarDiv()">
         </div>
 
         <div class="user-info">
@@ -72,5 +68,7 @@
     
     <!-- JavaScript Bundle with Popper -->
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>-->
+
+    <script src="{{url_for('static', filename='scripts/script.js')}}"></script>
 </body>
 </html>
