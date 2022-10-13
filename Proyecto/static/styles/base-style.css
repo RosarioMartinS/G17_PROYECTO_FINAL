@@ -119,7 +119,7 @@ body{
 hr{
     width: 21%;
     margin: auto;
-    height: .10rem;
+    height: 1px;
     background-color: var(--blanco);
     border-color: var(--blanco);
     margin-top: 20px;
