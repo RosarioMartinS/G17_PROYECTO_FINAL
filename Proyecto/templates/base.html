@@ -13,10 +13,10 @@
     </style>
 </head>
 <body>
-    <header>
+    <header >
         <nav class="barra-navegacion">
             <div class="menu-desplegable">
-
+              
             </div>
 
             <div class="navegacion">
@@ -27,8 +27,12 @@
             
         </nav>
     </header>
-    {% for in range (10)%}
-      <main class="contenedor-main ">
+    <div class="invisible">
+          
+    </div>
+    {% for i in range (10)%}
+      <main class="contenedor-main">
+
         <div class="imagenes">
           <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes">
         </div>
