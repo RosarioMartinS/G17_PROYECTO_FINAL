@@ -4,6 +4,7 @@ import os # The OS module in Python provides functions for creating and removing
 import sqlite3
 
 from werkzeug.utils import secure_filename
+from flask_socketio import SocketIO
 UPLOAD_FOLDER = './static/img'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 path = './static/img'
@@ -12,6 +13,8 @@ path2 = 'img'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "asdasdazsdawefdfascacs"
+socketio = SocketIO(app)
+
 
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
