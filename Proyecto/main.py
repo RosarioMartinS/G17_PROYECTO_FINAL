@@ -17,7 +17,7 @@ app.secret_key = "asdasdazsdawefdfascacs"
 def inicio():
     if request.method == "GET":
         return render_template("login.html", login = False)
-    elif request.method == "POST":
+    elif request.method == "POST":  
         return redirect('/')
 
 @app.route('/usuarioIngresado', methods=['GET', 'POST'])
@@ -69,7 +69,7 @@ def agregarUsuario():
 
         conn.commit()
         conn.close()
-        return render_template("base.html")
+        return redirect('/')
     elif request.method == "GET":
         return redirect('/register')
 

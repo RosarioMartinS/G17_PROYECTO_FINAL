@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final</title>
-    <link rel="stylesheet" href="/Proyecto/static/styles/base-style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/base-style.css')}}"> 
     <!-- CSS only -->
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">-->
     <style>
@@ -30,13 +30,13 @@
     </header>
     <main class="contenedor-main ">
       <div class="imagenes">
-        <img src="/Proyecto/static/img/outfit1.png" alt="" class="estilo-imagenes">
+        <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes"> 
       </div>
 
       <div class="user-info">
 
         <div class="foto-nombre-usuario">
-          <img src="/Proyecto/static/img/foto-perfil.jpg" alt="" class="foto-de-perfil">
+          <img src="{{url_for('static', filename='img/foto-perfil.jpg')}}" alt="" class="foto-de-perfil"> 
           <p class="estilo-nombre-usuario"><i>@smithmike</i></p> <!--Aca va el nombre del usuario guardado en la base de datos-->
         </div>
         
