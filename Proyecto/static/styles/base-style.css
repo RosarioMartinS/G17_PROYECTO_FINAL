@@ -33,7 +33,7 @@ body{
 
 #estilo-texto{
     font-size: 1.5em;
-    color: var(--blanco);
+    color: var(--gris-claro);
     font-weight: bolder;
 
 }
@@ -78,7 +78,7 @@ body{
     margin: auto;
     display: flex;
     flex-direction: row;
-
+    margin-top: 10px;
 }
 
 .foto-nombre-usuario{
@@ -86,6 +86,7 @@ body{
     height: auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
     
 }
 
@@ -93,14 +94,36 @@ body{
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    margin-top: 15px;
+    
     
 }
+
 .estilo-nombre-usuario{
-    margin-top: 8%;
     margin-left: 5%;
     width: auto;
     font-size: 1.2rem;
     font-weight: bolder;
     color:#f0f1f1;
 }
+
+.iconos{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap:15px;
+}
+
+hr{
+    width: 21%;
+    margin: auto;
+    height: .10rem;
+    background-color: var(--blanco);
+    border-color: var(--blanco);
+    margin-top: 20px;
+}
+
+
+
