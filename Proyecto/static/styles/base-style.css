@@ -12,9 +12,9 @@
 }
 
 body{
-    background-color: var(--negro) !important   ;
+    background-color: var(--negro) !important ;
+    
 }
-
 
 
 .barra-navegacion{
@@ -86,6 +86,13 @@ body{
     height: 550px;
 }
 
+.info-imagenes{
+    background-color: red;
+    width: 400px;
+    height: 550px;
+    z-index: 1;
+}
+
 .user-info{
     width: 400px;
     height: auto;
@@ -131,7 +138,7 @@ body{
 }
 
 hr{
-    width: 35%;
+    width: 30rem;
     margin: auto;
     height: .5px;
     background-color: var(--blanco);
