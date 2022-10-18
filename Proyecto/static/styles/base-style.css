@@ -40,6 +40,11 @@ body{
 .estilo-texto{
     font-size: 1.5em;
     color: var(--gris-claro);
+    
+}
+
+.estilo{
+    color: var(--blanco);
     font-weight: bolder;
     border-bottom: 2px solid var(--blanco);
     border-bottom-width: medium ;
@@ -98,7 +103,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #D62D2D;
+    background-color: var(--negro);
 }
 
 .user-info{

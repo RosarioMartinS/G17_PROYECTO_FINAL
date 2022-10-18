@@ -1,22 +1,42 @@
 function load() {
-    $( "#div-agregado" ).hidden = true;
-}
-
-function agregarDiv() {
-    let clase = document.getElementById("div-agregado");
-    console.log(clase);
-}
-
-function bordeInferior() {
-    let border1 = document.getElementById("estilo1").innerHTML;
-    let border2 = document.getElementById("estilo2").innerHTML;
-    let border3 = document.getElementById("estilo3").innerHTML;
-    
-    let borde1= String(border1);
-    let borde2= String(border2);
-    let borde3= String(border3);
-
-    if (borde1 == "Buscar"){
-        
+    for (let i = 0; i < document.getElementsByName("div-agregado").length; i++) {
+        const element = document.getElementsByName("div-agregado")[i];
+        element.classList.remove("claseParaProbar");
     }
+    //document.getElementsByName("div-agregado").classList.remove("claseParaProbar");
+
+    document.getElementById("estilo2").classList.add("estilo");
+    document.getElementById("estilo1").classList.remove("estilo");
+    document.getElementById("estilo3").classList.remove("estilo");
+
 }
+
+function agregarDiv(element) {
+    console.log(element);
+    element.children[1].classList.toggle("claseParaProbar");
+}
+
+
+function publicacion(){
+    document.getElementById("estilo2").classList.add("estilo");
+    document.getElementById("estilo1").classList.remove("estilo");
+    document.getElementById("estilo3").classList.remove("estilo");
+}
+
+function mensaje(){
+    document.getElementById("estilo2").classList.remove("estilo");
+    document.getElementById("estilo1").classList.remove("estilo");
+    document.getElementById("estilo3").classList.add("estilo");
+}
+
+function buscar(){
+    document.getElementById("estilo2").classList.remove("estilo");
+    document.getElementById("estilo1").classList.add("estilo");
+    document.getElementById("estilo3").classList.remove("estilo");
+}
+
+function favorito(element){
+    document.getElementById("favorito");
+    element.style.stroke = "red"; 
+}
+

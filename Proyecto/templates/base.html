@@ -12,7 +12,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
     </style>
 </head>
-<body>
+<body onload="load()">
   {% block navegador%}
     <header >
         <nav class="barra-navegacion">
@@ -21,9 +21,9 @@
             </div>
 
             <div class="navegacion">
-              <div class="estilo" onclick="bordeInferior()" ><h2 class="estilo-texto" id="estilo1"> Buscar </h2></div>
-              <div class="estilo estilo-borde"><h2 class="estilo-texto estilo2" id="estilo2"> Publicaciones </h2></div>
-              <div class="estilo estilo-borde "><h2 class="estilo-texto estilo3" id="estilo3"> Mensajes </h2></div>
+              <div class="" onclick="buscar()" ><h2 class="estilo-texto estilo" id="estilo1"> Buscar </h2></div>
+              <div class="estilo-borde" onclick="publicacion()" ><h2 class="estilo-texto estilo2 estilo" id="estilo2"> Publicaciones </h2></div>
+              <div class="estilo-borde " onclick="mensaje()" ><h2 class="estilo-texto estilo3 estilo" id="estilo3"> Mensajes </h2></div>
             </div>
             
         </nav>
@@ -36,9 +36,9 @@
   {% block principal %}  
     {% for i in range (10)%}
         <main class="contenedor-main ">
-          <div class="imagenes">
-            <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes" id="info-imagen" onclick="agregarDiv()">
-            <div hidden id="div-agregado" class="claseParaProbar">
+          <div class="imagenes" onclick="agregarDiv(this)">
+            <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes" id="info-imagen" >
+            <div hidden name="div-agregado" class="claseParaProbar">
               <div id="caracteristicas">
                 <h3><strong>Remera: </strong>variable</h3>
                 </br>
@@ -58,8 +58,8 @@
             </div>
             
             <div class="iconos">
-              <div class="icono-favorito">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <div class="icono-favorito" onclick="favorito(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round" id="favorito">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path>
               </svg>
