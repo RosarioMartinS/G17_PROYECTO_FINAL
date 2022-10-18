@@ -28,6 +28,7 @@ body{
     position: fixed;
     background-color: var(--negro);
     align-items: center;
+    z-index: 3;
 }
 
 .navegacion{
@@ -86,11 +87,18 @@ body{
     height: 550px;
 }
 
-.info-imagenes{
-    background-color: red;
+
+.claseParaProbar{
     width: 400px;
     height: 550px;
-    z-index: 1;
+    background-color: var(--negro);
+    position: absolute;
+    opacity: 0.75;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D62D2D;
 }
 
 .user-info{

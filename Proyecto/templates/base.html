@@ -31,15 +31,25 @@
     <div class="invisible">
           
     </div>
-  {% endbock %}
+  {% endblock %}
 
   {% block principal %}  
     {% for i in range (10)%}
         <main class="contenedor-main ">
           <div class="imagenes">
             <img src="{{url_for('static', filename='img/outfit1.png')}}" alt="" class="estilo-imagenes" id="info-imagen" onclick="agregarDiv()">
+            <div hidden id="div-agregado" class="claseParaProbar">
+              <div id="caracteristicas">
+                <h3><strong>Remera: </strong>variable</h3>
+                </br>
+                <h3><strong>Remera: </strong>variable</h3>
+                </br>
+                <h3><strong>Remera: </strong>variable</h3>
+                </br>
+                <h3><strong>Remera: </strong>variable</h3>
+              </div>
+            </div>
           </div>
-
           <div class="user-info">
 
             <div class="foto-nombre-usuario">
@@ -72,5 +82,6 @@
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>-->
 
     <script src="{{url_for('static', filename='scripts/script.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,10 @@
+function load() {
+    $( "#div-agregado" ).hidden = true;
+}
+
 function agregarDiv() {
-    let clase = document.getElementById("info-imagen");
-    clase.classList.add("info-imagenes")
-    console.log(clase)
+    let clase = document.getElementById("div-agregado");
+    console.log(clase);
 }
 
 function bordeInferior() {
