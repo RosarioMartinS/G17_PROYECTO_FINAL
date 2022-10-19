@@ -36,7 +36,7 @@ function buscar(){
 }
 
 function favorito(element){
-    document.getElementById("favorito");
-    element.style.stroke = "red"; 
+    //document.getElementById("favorito").classList.add("borde");
+    element.children[0].classList.toggle("borde");
 }
 
