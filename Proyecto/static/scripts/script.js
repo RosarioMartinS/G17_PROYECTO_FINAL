@@ -45,7 +45,36 @@ function lineaFoto(){
     document.getElementById("estilo2").classList.remove("estilo");
     document.getElementById("estilo1").classList.remove("estilo");
     document.getElementById("estilo3").classList.remove("estilo");
+
+    ocultarMains()
+    ocultarNavegador()
 }
+
+function mostrarSubirPublicacion() {
+    none
+}
+
+function ocultarMains() {
+    for (let i = 0; i < document.getElementsByClassName("contenedor-main").length; i++) {
+        const element = document.getElementsByClassName("contenedor-main")[i];
+        element.style.display = 'none';
+    }
+}
+
+function ocultarNavegador() {
+    const navegador = document.getElementsByClassName("navegacion");
+    navegador[0].style.display = 'none';
+    
+
+}
+
+function mostrarMains() {
+    for (let i = 0; i < document.getElementsByClassName("contenedor-main").length; i++) {
+        const element = document.getElementsByClassName("contenedor-main")[i];
+        element.style.display = 'block';
+    }
+}
+
 function favorito(element){
     //document.getElementById("favorito").classList.add("borde");
     element.children[0].classList.toggle("borde");
