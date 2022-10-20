@@ -21,20 +21,31 @@ function publicacion(){
     document.getElementById("estilo2").classList.add("estilo");
     document.getElementById("estilo1").classList.remove("estilo");
     document.getElementById("estilo3").classList.remove("estilo");
+    document.getElementById("icono-subir-foto").classList.remove("estilo");
+
 }
 
 function mensaje(){
     document.getElementById("estilo2").classList.remove("estilo");
     document.getElementById("estilo1").classList.remove("estilo");
     document.getElementById("estilo3").classList.add("estilo");
+    document.getElementById("icono-subir-foto").classList.remove("estilo");
+
 }
 
 function buscar(){
     document.getElementById("estilo2").classList.remove("estilo");
     document.getElementById("estilo1").classList.add("estilo");
     document.getElementById("estilo3").classList.remove("estilo");
+    document.getElementById("icono-subir-foto").classList.remove("estilo");
 }
 
+function lineaFoto(){
+    document.getElementById("icono-subir-foto").classList.add("estilo");
+    document.getElementById("estilo2").classList.remove("estilo");
+    document.getElementById("estilo1").classList.remove("estilo");
+    document.getElementById("estilo3").classList.remove("estilo");
+}
 function favorito(element){
     //document.getElementById("favorito").classList.add("borde");
     element.children[0].classList.toggle("borde");
