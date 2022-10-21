@@ -65,7 +65,6 @@ function ocultarNavegador() {
     const navegador = document.getElementsByClassName("navegacion");
     navegador[0].style.display = 'none';
     
-
 }
 
 function mostrarMains() {
