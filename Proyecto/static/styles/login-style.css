@@ -102,3 +102,7 @@ hr{
     background-color: var(--gris-claro);
     transition: .6s;
 }
+
+.usuarioNoLogueado{
+    color: var(--rojo);
+}
