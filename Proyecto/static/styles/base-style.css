@@ -195,10 +195,23 @@ hr{
 
 .contenedor-subir{
     width: 35%;
-    height: auto;
+    height: 20rem;
     background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
 }
 
 .contenedor-info{
+    width: 100%;
     color: black;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.estilo-div{
+    width: 100%;
+    background-color: red;
+    display: flex;
+    margin-top: 10px;
 }

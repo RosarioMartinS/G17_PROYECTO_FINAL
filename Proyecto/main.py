@@ -13,10 +13,10 @@ path2 = 'img'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "asdasdazsdawefdfascacs"
-socketio = SocketIO(app)
+#socketio = SocketIO(app)
 
-if __name__ == '__main__':
-    socketio.run(app)
+#if __name__ == '__main__':
+#    socketio.run(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def inicio():
