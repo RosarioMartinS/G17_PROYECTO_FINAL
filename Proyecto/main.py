@@ -85,5 +85,13 @@ def home():
     elif request.method == "POST":
         return redirect('/home')
 
+@app.route('/probando', methods=['POST','GET'])
+def probando():
+    if request.method == "GET":
+        return render_template("probando.html")
+    elif request.method == "POST":
+        return redirect('/home')
+
+
 
 app.run(host='0.0.0.0', port=81)

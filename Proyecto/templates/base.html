@@ -14,7 +14,7 @@
 </head>
 <body onload="load()">
   {% block navegador%}
-    <header >
+    <header class="header">
         <nav class="barra-navegacion">
             <div class="logo">
               
@@ -92,7 +92,9 @@
           <section class="publicacion">
             <div class="contenedor-subir">
               <form action="" method="post" class="orden-elementos">
+
                 <div class="subir-archivo">
+                  
                   <input type="file" name="" id="img" accept="image/png, image/jpeg, image/jpg" style="display:none;">
                   <label for="img" class="texto-archivo">Subir imagen</label>
 
@@ -152,8 +154,11 @@
                   </div>
 
                 </div>
-
-                <input type="submit" value="PUBLICAR">
+                
+                <div class="boton-publicar">
+                  <input type="submit" value="PUBLICAR" class="publicar">
+                </div>
+                
               
               </form>
             </div>

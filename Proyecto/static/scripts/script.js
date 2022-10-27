@@ -62,8 +62,11 @@ function ocultarMains() {
 }
 
 function ocultarNavegador() {
-    const navegador = document.getElementsByClassName("navegacion");
+    const navegador = document.getElementsByClassName("header");
     navegador[0].style.display = 'none';
+
+    const invisible = document.getElementsByClassName("invisible");
+    invisible[0].style.display = 'none';
     
 }
 
