@@ -70,6 +70,18 @@ h1{
     color:var(--gris-claro)
 }
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--negro) inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: var(--blanco) !important;
+}
+
 #username-password::placeholder{
     color:var(--gris-claro)
 }
