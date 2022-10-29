@@ -9,6 +9,8 @@ function load() {
     document.getElementById("estilo1").classList.remove("estilo");
     document.getElementById("estilo3").classList.remove("estilo");
 
+    
+
 }
 
 function agregarDiv(element) {

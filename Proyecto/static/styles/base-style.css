@@ -80,6 +80,10 @@ body{
     background-color: var(--negro);
 }
 
+.mas:hover{
+    cursor: pointer;
+}
+
 /* Menu Hamburguesa*/
 
 /* Fin Menu Hamburguesa*/
@@ -194,13 +198,14 @@ hr{
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 4;
     margin-top: 0;
 }
 
 .subir-archivo{
     margin: AUTO;
-    height: 35%;
+    height: 40%;
     margin-top: 7%;
     border: solid 3px var(--negro);
     border-radius: 2em;
@@ -219,7 +224,7 @@ hr{
 }
 
 .contenedor-subir{
-    width: 30%;
+    width: 25%;
     height: 90%;
     display: flex;
     justify-content: center;
