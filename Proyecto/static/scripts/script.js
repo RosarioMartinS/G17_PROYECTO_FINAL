@@ -1,14 +1,19 @@
 function load() {
-    for (let i = 0; i < document.getElementsByName("div-agregado").length; i++) {
-        const element = document.getElementsByName("div-agregado")[i];
-        element.classList.remove("claseParaProbar");
+    try {
+        for (let i = 0; i < document.getElementsByName("div-agregado").length; i++) {
+            const element = document.getElementsByName("div-agregado")[i];
+            element.classList.remove("claseParaProbar");
+        }
+        //document.getElementsByName("div-agregado").classList.remove("claseParaProbar");
+    
+        document.getElementById("estilo2").classList.add("estilo");
+        document.getElementById("estilo1").classList.remove("estilo");
+        document.getElementById("estilo3").classList.remove("estilo");
+    
+    } catch (error) {
+        
     }
-    //document.getElementsByName("div-agregado").classList.remove("claseParaProbar");
-
-    document.getElementById("estilo2").classList.add("estilo");
-    document.getElementById("estilo1").classList.remove("estilo");
-    document.getElementById("estilo3").classList.remove("estilo");
-
+   
     
 
 }
@@ -83,4 +88,6 @@ function favorito(element){
     //document.getElementById("favorito").classList.add("borde");
     element.children[0].classList.toggle("borde");
 }
+
+
 
