@@ -16,6 +16,7 @@ body{
     height: 100vh;
 }
 
+/* NAVEGACION PAGINA */
 
 .barra-navegacion{
     width: 100%;
@@ -61,6 +62,28 @@ body{
     padding-left: 20px;
 
 }
+/* ------------ */
+
+/* BARRA NAVEGACION */
+
+.input-navegacion{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav-bar{
+    width: 60%;
+    height: 35px;
+    border-radius: 80px;
+    margin-top: 10px;
+}
+
+/*---------------*/
+
+/* INTERFAZ PERFIL */
 
 .navegacion-perfil{
     display: flex;
@@ -83,9 +106,9 @@ body{
     cursor: pointer;
 }
 
-/* Menu Hamburguesa*/
+/* ------------- */
 
-/* Fin Menu Hamburguesa*/
+/* MAIN PUBLICACIONES */
 
 main{
     height: calc(100vh - 70px);
@@ -163,7 +186,7 @@ main{
 
 .foto-de-perfil-1:hover{
     cursor: pointer;
-    box-shadow: 1.5px 1.5px var(--gris-claro);
+    transform: scale(1.05,1.05);
     transition: .05s;
 }
 
@@ -202,6 +225,10 @@ hr{
     border-color: var(--blanco);
     margin-top: 20px;
 }
+
+/* ---------------*/
+
+/* SUBIR ARCHIVO*/
 
 .publicacion{
     width: 100%;
@@ -326,6 +353,8 @@ hr{
     cursor: pointer;
 }
 
+/* ----------*/
+
 .opciones{
     font-size: 3em;
 }
@@ -342,7 +371,7 @@ hr{
     color: yellow;
 }
 
-/*Base extendido --> Perfil*/
+/*BASE EXTENDIDO --> PERFIL*/
 .mi-perfil{
     display: flex;
     margin: auto;
@@ -374,3 +403,5 @@ hr{
     width: 195px;
     height: 255px;
 }
+
+/*-------*/

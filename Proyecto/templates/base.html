@@ -28,7 +28,7 @@
 
             <div class="navegacion-perfil">
               <div class="subir-foto" onclick="lineaFoto()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="grey" class="bi bi-plus mas" viewBox="0 0 16 14" id="icono-subir-foto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="40" fill="grey" class="bi bi-plus mas" viewBox="0 0 16 14" id="icono-subir-foto" ">
                   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                 </svg>
               </div>
@@ -49,6 +49,30 @@
 
   {% block principal %}  
         <main >
+          <div class="input-navegacion">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <circle cx="14" cy="6" r="2"></circle>
+              <line x1="4" y1="6" x2="12" y2="6"></line>
+              <line x1="16" y1="6" x2="20" y2="6"></line>
+              <circle cx="8" cy="12" r="2"></circle>
+              <line x1="4" y1="12" x2="6" y2="12"></line>
+              <line x1="10" y1="12" x2="20" y2="12"></line>
+              <circle cx="17" cy="18" r="2"></circle>
+              <line x1="4" y1="18" x2="15" y2="18"></line>
+              <line x1="19" y1="18" x2="20" y2="18"></line>
+           </svg>
+
+            <input type="text" name="" id="" class="nav-bar">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="black" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <circle cx="10" cy="10" r="7"></circle>
+              <line x1="21" y1="21" x2="15" y2="15"></line>
+           </svg>
+
+          </div>
           {% for i in range (10)%}
             <div class="contenedor-main">
               <div class="imagenes" onclick="agregarDiv(this)">
@@ -97,7 +121,7 @@
             <div class="contenedor-subir">
               <div class="contenedor-flecha">
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left flecha" width="24" height="24" viewBox="0 0 18 18" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left flecha" width="24" height="24" viewBox="0 0 18 18" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="window.location.href='{{ url_for('home')}}';">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <polyline points="15 6 9 12 15 18"></polyline>
                </svg>
@@ -111,7 +135,7 @@
                   <input type="file" name="" id="img" accept="image/png, image/jpeg, image/jpg" style="display:none;">
                   <label for="img" class="texto-archivo">Subir imagen</label>
 
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-upload" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" > <!-- onclick="window.location.href='{{ url_for('home')}}';" -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-upload" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
                     <polyline points="7 9 12 4 17 9"></polyline>
