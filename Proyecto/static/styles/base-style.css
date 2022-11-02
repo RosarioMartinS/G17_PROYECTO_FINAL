@@ -65,12 +65,12 @@ body{
 .navegacion-perfil{
     display: flex;
     width: 100px;
+    justify-content: space-between;
+    gap: 10px;
     align-items: center;
     color: var(--blanco);
     position: absolute;
     left: 90%;
-    
-    
 }
 
 .invisible{
@@ -153,7 +153,18 @@ main{
     height: 40px;
     width: 40px;
     
-    
+}
+
+.foto-de-perfil-1{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+.foto-de-perfil-1:hover{
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px var(--gris-claro);
+    transition: .05s;
 }
 
 .estilo-nombre-usuario{
@@ -331,7 +342,7 @@ hr{
     color: yellow;
 }
 
-/*Base extendido*/
+/*Base extendido --> Perfil*/
 .mi-perfil{
     display: flex;
     margin: auto;
@@ -343,7 +354,6 @@ hr{
 
 .container{
     width: 100%;
-    background-color: red;
     height: calc(100vh - 53px);
     display: flex;
     justify-content: center;
@@ -351,16 +361,16 @@ hr{
 }
 
 .grid-container{
-    width: 50%;
-    background-color: blue;
+    width: auto;
     height: auto;
+    margin-top: 10%;
     display: grid;
-    column-gap: 20px;
-    row-gap: 10px;
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+    row-gap: 20px;
 }
 
 .foto{
-    width: 50px;
-    height: 75px;
-    object-fit: cover;
+    width: 195px;
+    height: 255px;
 }
