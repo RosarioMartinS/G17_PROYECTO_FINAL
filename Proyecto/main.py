@@ -85,8 +85,8 @@ def home():
     elif request.method == "POST":
         return redirect('/home')
 
-@app.route('/probando', methods=['POST','GET'])
-def probando():
+@app.route('/profile', methods=['POST','GET'])
+def profile():
     if request.method == "GET":
         return render_template("profile.html")
     elif request.method == "POST":

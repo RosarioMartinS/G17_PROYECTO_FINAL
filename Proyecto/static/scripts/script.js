@@ -13,9 +13,7 @@ function load() {
     } catch (error) {
         
     }
-   
-    
-
+    ocultarBusqueda()
 }
 
 function agregarDiv(element) {
@@ -30,6 +28,8 @@ function publicacion(){
     document.getElementById("estilo3").classList.remove("estilo");
     document.getElementById("icono-subir-foto").classList.remove("estilo");
 
+    ocultarBusqueda();
+
 }
 
 function mensaje(){
@@ -38,6 +38,8 @@ function mensaje(){
     document.getElementById("estilo3").classList.add("estilo");
     document.getElementById("icono-subir-foto").classList.remove("estilo");
 
+    ocultarBusqueda();
+
 }
 
 function buscar(){
@@ -45,6 +47,8 @@ function buscar(){
     document.getElementById("estilo1").classList.add("estilo");
     document.getElementById("estilo3").classList.remove("estilo");
     document.getElementById("icono-subir-foto").classList.remove("estilo");
+
+    mostrarBusqueda();
 }
 
 function lineaFoto(){
@@ -66,6 +70,16 @@ function ocultarMains() {
         const element = document.getElementsByClassName("contenedor-main")[i];
         element.style.display = 'none';
     }
+}
+
+function ocultarBusqueda(){
+    const element = document.getElementsByClassName("nav-bar")[0];
+    element.style.display = 'none';
+}
+
+function mostrarBusqueda(){
+    const element = document.getElementsByClassName("nav-bar")[0];
+    element.style.display = 'block';
 }
 
 function ocultarNavegador() {

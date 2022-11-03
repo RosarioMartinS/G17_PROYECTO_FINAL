@@ -75,10 +75,28 @@ body{
 }
 
 .nav-bar{
-    width: 60%;
+    width: 50%;
     height: 35px;
     border-radius: 80px;
-    margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    padding-left: 50px;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.icono{
+    color: #191919;
+    position: relative;
+    top: 23px;
+    left: 40px;
+}
+
+.icono-2{
+    color: #191919;
+    position: relative;
+    top: 23px;
+    right: 40px;
 }
 
 /*---------------*/
