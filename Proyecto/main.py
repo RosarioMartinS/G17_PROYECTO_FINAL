@@ -81,6 +81,15 @@ def agregarUsuario():
 @app.route('/home', methods=['POST','GET'])
 def home():
     if request.method == "GET":
+        session["imagen"]         = ""
+        session["nombreRemera"]   = ""
+        session["precioRemera"]   = ""
+        session["nombreAbrigo"]   = ""
+        session["precioAbrigo"]   = ""
+        session["nombrePantalon"] = ""
+        session["precioPanalon"]  = ""
+        session["nombreSneaker"]  = ""
+        session["precioSneaker"]  = ""
         return render_template("base.html")
     elif request.method == "POST":
         return redirect('/home')
@@ -92,6 +101,33 @@ def profile():
     elif request.method == "POST":
         return redirect('/home')
 
+@app.route('/subirImagen', methods=['POST', 'GET'])
+def nuevaImagen():
+    if request.method == "POST":
+        session["imagen"]         = request.files["imagen"]        
+        session["nombreRemera"]   = request.form["nombbreRemera"]
+        session["precioRemera"]   = request.form["precioRemera"]
+        session["nombreAbrigo"]   = request.form["nombreAbrigo"]
+        session["precioAbrigo"]   = request.form["precioAbrigo"]
+        session["nombrePantalon"] = request.form["nombrePantalon"]
+        session["precioPanalon"]  = request.form["precioPantalon"]
+        session["nombreSneaker"]  = request.form["nombreSneaker"]
+        session["precioSneaker"]  = request.form["precioSneaker"]
 
+        #if session["imagen"].filename == '':
+            #flash('No selected file')
+           #return redirect('/home')
+        #else:
+        filename = secure_filename(session["imagen"].filename)
+        session["imagen"].save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        print(filename)
+        session['img'] = "/static/" + path2 + '/' + filename + ""
+        print(session['img'])
+
+        #conn = sqlite3.connect('Publicaciones.db')
+        #q = f"""INSERT INTO publicaciones(usuario, rutaImagen,nombreRemera , precioRemera,nombreAbrigo , precioAbrigo, nombrePantalon,precioPanalon ,nombreSneaker ,precioSneaker)"""
+        return redirect('/home')
+    elif request.method == "GET":
+        return redirect('/home')
 
 app.run(host='0.0.0.0', port=81)
