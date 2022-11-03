@@ -57,8 +57,9 @@ function lineaFoto(){
     document.getElementById("estilo1").classList.remove("estilo");
     document.getElementById("estilo3").classList.remove("estilo");
 
-    ocultarMains()
-    ocultarNavegador()
+    ocultarMains();
+    ocultarNavegador();
+    ocultarBusqueda();
 }
 
 function mostrarSubirPublicacion() {
@@ -73,8 +74,8 @@ function ocultarMains() {
 }
 
 function ocultarBusqueda(){
-    const element = document.getElementsByClassName("nav-bar")[0];
-    element.style.display = 'none';
+    const element = document.getElementsByClassName("nav-bar");
+    element[0].style.display = 'none';
 }
 
 function mostrarBusqueda(){
