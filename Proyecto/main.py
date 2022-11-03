@@ -114,6 +114,7 @@ def nuevaImagen():
         session["nombreSneaker"]  = request.form["nombreSneaker"]
         session["precioSneaker"]  = request.form["precioSneaker"]
 
-        
+        conn = sqlite3.connect('Publicaciones.db')
+        q = f"""INSERT INTO publicaciones(usuario, rutaImagen,nombreRemera , precioRemera,nombreAbrigo , precioAbrigo, nombrePantalon,precioPanalon ,nombreSneaker ,precioSneaker)"""
 
 app.run(host='0.0.0.0', port=81)
