@@ -13,7 +13,9 @@ function load() {
     } catch (error) {
         
     }
-    ocultarBusqueda()
+    ocultarBusqueda();
+    ocultarSubirPublicacion();
+
 }
 
 function agregarDiv(element) {
@@ -60,10 +62,17 @@ function lineaFoto(){
     ocultarMains();
     ocultarNavegador();
     ocultarBusqueda();
+    mostrarSubirPublicacion();
+}
+
+function ocultarSubirPublicacion() {
+    const div = document.getElementsByClassName("publicacion");
+    div[0].style.display = 'none';
 }
 
 function mostrarSubirPublicacion() {
-    none
+    const div = document.getElementsByClassName("publicacion");
+    div[0].style.display = 'flex';
 }
 
 function ocultarMains() {
@@ -74,13 +83,13 @@ function ocultarMains() {
 }
 
 function ocultarBusqueda(){
-    const element = document.getElementsByClassName("nav-bar");
+    const element = document.getElementsByClassName("input-navegacion");
     element[0].style.display = 'none';
 }
 
 function mostrarBusqueda(){
-    const element = document.getElementsByClassName("nav-bar")[0];
-    element.style.display = 'block';
+    const element = document.getElementsByClassName("input-navegacion");
+    element[0].style.display = 'flex';
 }
 
 function ocultarNavegador() {
@@ -95,7 +104,7 @@ function ocultarNavegador() {
 function mostrarMains() {
     for (let i = 0; i < document.getElementsByClassName("contenedor-main").length; i++) {
         const element = document.getElementsByClassName("contenedor-main")[i];
-        element.style.display = 'block';
+        element.style.display = 'flex';
     }
 }
 

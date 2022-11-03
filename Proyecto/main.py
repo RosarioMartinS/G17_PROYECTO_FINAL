@@ -43,7 +43,7 @@ def checkearUsuario():
         if resu.fetchone():
             return redirect('/home')
         else:
-            flash('El usuario o la contraseña son incorrectos! Intenta de nuevo o registrate si no lo estas!')
+            flash('Usuario o contraseña incorrectos')
             return render_template("login.html", login = True)
 
 

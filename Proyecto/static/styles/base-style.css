@@ -81,21 +81,23 @@ body{
     margin-top: 15px;
     display: flex;
     padding-left: 50px;
-    font-size: 1.3em;
+    font-size: 1.15em;
     font-weight: bolder;
+    border: none;
+    outline: none;
 }
 
 .icono{
     color: #191919;
     position: relative;
-    top: 23px;
+    top: 21px;
     left: 40px;
 }
 
 .icono-2{
     color: #191919;
     position: relative;
-    top: 23px;
+    top: 21px;
     right: 40px;
 }
 
@@ -111,7 +113,7 @@ body{
     align-items: center;
     color: var(--blanco);
     position: absolute;
-    left: 90%;
+    right: 10px;
 }
 
 .invisible{
@@ -250,7 +252,7 @@ hr{
 
 .publicacion{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 10px);
     display: flex;
     justify-content: center;
     align-items: center;
