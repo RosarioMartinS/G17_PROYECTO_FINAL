@@ -114,4 +114,19 @@ function favorito(element){
 }
 
 
+//function enviarImagen(params) {
+    //valor = document.getEelementByID("img").value;
+    //valorRemera = document.getElementById("modelo-remera").value
+    //$.ajax({ 
+        //url:"/subirImagen", 
+        //type:"POST", 
+        //data: {"value":valor},    
+        //success: function(response){  //En response voy a tener el JSON
+            
+        //}, 
+        //error: function(error){ 
+          //console.log(error); 
+      //}, });
+//}
+
 
