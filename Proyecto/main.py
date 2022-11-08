@@ -84,12 +84,16 @@ def home():
         session["imagen"]         = ""
         session["nombreRemera"]   = ""
         session["precioRemera"]   = ""
+        session["colorRemera"]    = ""
         session["nombreAbrigo"]   = ""
         session["precioAbrigo"]   = ""
+        session["colorAbrigo"]    = ""
         session["nombrePantalon"] = ""
-        session["precioPanalon"]  = ""
+        session["precioPantalon"] = ""
+        session["colorPantalon"]  = ""
         session["nombreSneaker"]  = ""
         session["precioSneaker"]  = ""
+        session["colorSneaker"]   = ""
         return render_template("base.html")
     elif request.method == "POST":
         return redirect('/home')
@@ -105,13 +109,13 @@ def profile():
 def nuevaImagen():
     if request.method == "POST":
         session["imagen"]         = request.files["imagen"]        
-        session["nombreRemera"]   = request.form["nombreRemera"]
+        session["nombreRemera"]   = request.form["modeloRemera"]
         session["precioRemera"]   = request.form["precioRemera"]
-        session["nombreAbrigo"]   = request.form["nombreAbrigo"]
+        session["nombreAbrigo"]   = request.form["modeloAbrigo"]
         session["precioAbrigo"]   = request.form["precioAbrigo"]
-        session["nombrePantalon"] = request.form["nombrePantalon"]
-        session["precioPanalon"]  = request.form["precioPantalon"]
-        session["nombreSneaker"]  = request.form["nombreSneaker"]
+        session["nombrePantalon"] = request.form["modeloPantalon"]
+        session["precioPantalon"]  = request.form["precioPantalon"]
+        session["nombreSneaker"]  = request.form["modeloSneaker"]
         session["precioSneaker"]  = request.form["precioSneaker"]
 
         #if session["imagen"].filename == '':
