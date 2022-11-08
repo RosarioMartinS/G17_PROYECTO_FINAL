@@ -105,7 +105,7 @@ def profile():
 def nuevaImagen():
     if request.method == "POST":
         session["imagen"]         = request.files["imagen"]        
-        session["nombreRemera"]   = request.form["nombbreRemera"]
+        session["nombreRemera"]   = request.form["nombreRemera"]
         session["precioRemera"]   = request.form["precioRemera"]
         session["nombreAbrigo"]   = request.form["nombreAbrigo"]
         session["precioAbrigo"]   = request.form["precioAbrigo"]
