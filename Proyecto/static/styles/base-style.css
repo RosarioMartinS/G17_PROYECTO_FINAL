@@ -337,6 +337,7 @@ hr{
     color: var(--negro);
     font-weight: bolder;
     padding: 5px;
+    font-size: 1em;
 }
 
 .no-border::placeholder{
@@ -350,6 +351,11 @@ hr{
     border: 0;
     border-bottom: solid 2px var(--negro);
     background-color: var(--blanco);
+    text-align: right;
+    color: var(--negro);
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding-right: 2px;
 }
 
 .boton-publicar{
